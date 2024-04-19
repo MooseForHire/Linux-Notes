@@ -1,0 +1,6 @@
+chmod u=rwx, g=rx, o= file.txt	          rwxr-x---
+chmod -R 755 my_directory	                Recursively set rwxr-xr-x perms.
+chown  :new_group file_name.txt	          Changes group owner to new_group
+chown new_owner:new_group directory_name	Changes both owner and group
+chgrp -R directory_name/	                Recursively change group owner
+groupmod -g <gid> <group>	                Change a groups' GID

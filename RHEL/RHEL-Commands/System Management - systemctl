@@ -1,0 +1,4 @@
+systemctl  cat  network.service	Display content of a unit file
+systemctl list-unit-files | grep enabled	List all enabled units
+systemctl  show  service	Show details about a service
+systemctl  --failed	List failed services

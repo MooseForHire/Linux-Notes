@@ -1,0 +1,28 @@
+
+Finding Files:
+
+find  /path/dir  -name  'file.txt'	                          Find file.txt in /path/dir
+find  /path/dir  -type  d  -name '.json'	                    Find directories with .json in the name.
+find  /path/dir  -mtime +1	                                  Find files modified more than 1 day ago.
+find  /path/dir  -mtime -1	                                  Find files modified within the last day.
+find /path/dir   -mtime  0	                                  Find files modified within the last 24 hours.
+find /path/dir   -name  "*txt"  -exec  grep  -Hi foo  {}\;	  Find a file with txt in the name, then search for "foo" inside the file.
+find /path/dir   -maxdepth 1  -type d 	                      Limit to 1 directory deep
+
+
+Find and Delete Files & Directories:
+
+find  /path/dir  -name  'file.txt' -delete	                                          Find files with the name file.txt and delete them
+find  /path/dir  -name  'file.txt'   -exec   rm   {}   \;	                            When -exec rm {} is used, it will fill each found file in the {} placeholder.
+find  /path/dir  -name  'file.txt' | xargs rm	                                        Uses xargs to call the rm command to remove the files.
+find  /path/dir  -depth  -type  d  -name  'directory1'  -exec  rm  -r '{}'  \;	      Deletes all directories named directory1
+find /path/dir  -type  d  -name  'directory1' | xargs  rm  -r	                        Deletes all directories named directory1 using xargs
+mkdir empty_dir;  rsync  -a  --delete   empty_dir/       your_directory/	            Once complete, empty_dir and the your_directory will be empty.
+du  -a  /directory/  | sort  -n  -r  | head -n 20	                                    Print 20 largest files in the directory
+
+More advanced:
+
+find /directory/ -type d -exec du -h --max-depth=1 {} + | sort -rh                                                       --max-depth=2 limits the depth of the directory hierarchy to 2 levels
+find /directory/ -type d -exec du -h --max-depth=2 --one-file-system {} + | sort -rh                                --one-file-system prevents du from crossing filesystem boundaries  
+find /directory/ -type d -not-path '*/.*' -exec du -h --max-depth=2 --one-file-system {} + | sort -rh               skips hidden directories
+find /directory/ -type d -not-path '*/.*' | parallel -j4 du -h --max-depth=2 --one-file-system {} + | sort -rh      value after -j controls number of parallel processes

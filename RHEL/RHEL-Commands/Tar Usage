@@ -1,0 +1,3 @@
+tar  -czvf archive-name.tar.gz  /path/to/directory-or-file	          c: Create  z: Compress w/ gzip  v: Verbose  f:  Specify the filename of the archive
+tar  -xvzf archive-name.tar.gz  /path/to/directory-or-file	          x: Extract z: Compress w/ gzip  v: Verbose  f:  Specify the filename of the archive
+tar  -tzf archive-name.tar.gz  	                                      t: List files in an archive z: Compress w/ gzip f:  Specify the filename of the archive

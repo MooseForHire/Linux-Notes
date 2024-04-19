@@ -1,0 +1,20 @@
+The awk command is the most useful when handling text files that are formatted in a predictable way.
+
+syntax:
+
+awk '/search_pattern/ { action_to_take_on_matches; another_action; }' file_to_parse
+
+
+We can use the action section to specify which pieces of information we want to print. For instance, to print only the first column, we can type:
+
+
+$ awk '/^UUID/ {print $1;}' /etc/fstab
+
+and get this result:
+
+UUID=dca7dd33-7ac2-4e12-a85f-555008cdb302
+UUID=D790-E415
+UUID=9555d31f-54fa-4f68-b597-3c0c77335182
+
+We can reference every column (as delimited by white space) by variables associated with their column number. The first column can be referenced by **$1** for instance. The entire line can by referenced by **$0**.
+

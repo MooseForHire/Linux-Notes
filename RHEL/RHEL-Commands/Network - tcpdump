@@ -1,0 +1,7 @@
+TCP FLAGS	S - Conn. Start,  F - Conn. Finish,  P - Data Push,  R  -  Conn. Reset,  .  -  Acknowledgement
+
+tcpdump -D	                            List interfaces available for capture
+tcpdump --interface  any	              Capture any packets
+tcpdump  -i  any  -c 5	                Capture 5 packets on any interface
+tcpdump  -i  any  -c5  -nn port 80	    Filter for port 80 packets only
+

@@ -1,0 +1,2 @@
+ipa-getcert list	    List IPA cert of a host
+ipactl status	        Status of IPA-related services

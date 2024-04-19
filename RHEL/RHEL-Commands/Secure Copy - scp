@@ -1,0 +1,2 @@
+scp  ~/file.txt  user@123.456.789:/destination/folder	      FROM LOCAL to a REMOTE host.
+scp   user@123.456.789:/destination/folder  ~/file.txt 	    PULL a file from a remote host to LOCAL

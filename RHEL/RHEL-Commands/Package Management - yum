@@ -1,0 +1,7 @@
+yum list all	      List all packages in ALL repositories, as well as Installed
+yum list available	List available packages to be installed
+yum list updates	  Lists available updates
+yum makecache	      Download all metadata for currently enabled repositories
+yum clean all	      Clean all cached files
+yum update	        Update all packages
+yum upgrade	        Update all packages, delete obsoletes
