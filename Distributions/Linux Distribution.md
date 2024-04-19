@@ -1,0 +1,1 @@
+A distribution is a complete package that includes the Linux kernel along with a collection of software applications, libraries, tools, utilities, and a package management system. Distributions provide a pre-configured and cohesive environment for users, making it easier to install, configure, and use Linux.
