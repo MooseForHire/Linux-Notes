@@ -17,7 +17,7 @@ A filesystem typically has layers:
 5.  Physical layer: This is the layer that deals with the actual physical storage medium, such as the hard disk platters, read/write heads, and the electronic circuits that control them.
 
 
-
+```
 -   /bin: Contains essential system binaries (executable files) that are required for booting the system and for normal system operation.
     
 -   /sbin: Contains system binaries that are used for system administration tasks, such as disk partitioning and system startup.
@@ -33,6 +33,7 @@ A filesystem typically has layers:
 -   /root: The home directory for the root user.
     
 -   /tmp: Contains temporary files that are created by applications and services.
+```
 
 Linux supports a wide range of filesystems, including popular ones such as ext4, XFS, and Btrfs, as well as network filesystems like NFS and SMB.
 
