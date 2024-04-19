@@ -17,19 +17,18 @@ $ echo "This is a test" | sed -n '/test/p'      ----> If "test" is found, print 
 This is a test
 
 $ echo "This is a test" | sed -n '/trial/p'   -----> If "trial" is found, print the whole line.
-$
 
 $ echo "This is a test" | gawk '/test/{print $0}'  ---> if "test" is found, print whole line.
 This is a test
 
 $ echo "This is a test" | gawk '/trial/{print $0}' ---> if "trial" is found, print whole line
-$
 
 
 - As you can see from above, sed and gawk use different versions of the print command to print any lines matching.
 - Note they are case-sensitive. If this were run: '/Test/p' or '/Test/{print $0}', it wouldn’t have matched.
 
 It doesn’t have to match the whole word, it just needs to contain it:
+
 
 $ echo "The books are expensive" | sed -n '/book/p'
 The books are expensive.
@@ -38,21 +37,6 @@ It also can contain spaces and numbers:
 
 $ echo "The books are expensive" | sed -n '/books are/p'
 The books are expensive.
-
-The following example finds the lines with double whitespaces and prints them:
-
-file.txt
-calebsteen
- 20240105140255Z
-gwashington
- 20240105140255Z
-
-$ sed -n '/  /p' file.txt
-  20240105140255Z
-  20240105140255Z
-![image](https://github.com/MooseForHire/Linux-Notes/assets/83081716/4a42ee8f-7e01-43e7-8516-3081bc378303)
-
-
 
 
 
