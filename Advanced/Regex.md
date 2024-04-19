@@ -25,7 +25,7 @@ This is a test
 
 
 - As you can see from above, sed and gawk use different versions of the print command to print any lines matching.
-- Note they are case-sensitive. If this were run: '/Test/p' or '/Test/{print $0}', it wouldn’t have matched.
+- Note they are case-sensitive. If this were run: ```'/Test/p' or '/Test/{print $0}'``` , it wouldn’t have matched.
 
 It doesn’t have to match the whole word, it just needs to contain it:
 
