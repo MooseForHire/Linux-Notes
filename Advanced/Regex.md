@@ -13,15 +13,15 @@ Gawk uses ERE.
 
 First some examples:
 
-$ echo "This is a test" | sed -n '/test/p'      ----> If "test" is found, print the whole line.
+```$ echo "This is a test" | sed -n '/test/p'```      ----> If "test" is found, print the whole line. Output: 
 This is a test
 
-$ echo "This is a test" | sed -n '/trial/p'   -----> If "trial" is found, print the whole line.
+```$ echo "This is a test" | sed -n '/trial/p'```   -----> If "trial" is found, print the whole line. Output:
 
-$ echo "This is a test" | gawk '/test/{print $0}'  ---> if "test" is found, print whole line.
+```$ echo "This is a test" | gawk '/test/{print $0}'```  ---> if "test" is found, print whole line. Output:
 This is a test
 
-$ echo "This is a test" | gawk '/trial/{print $0}' ---> if "trial" is found, print whole line
+```$ echo "This is a test" | gawk '/trial/{print $0}'``` ---> if "trial" is found, print whole line Output:
 
 
 - As you can see from above, sed and gawk use different versions of the print command to print any lines matching.
